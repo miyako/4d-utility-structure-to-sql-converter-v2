@@ -1,0 +1,37 @@
+﻿{
+	"methods": {
+		"convert_structure_to_sql": {
+			"timeStamp": "2020-07-05T09:11:10.308Z",
+			"attributes": {
+				"invisible": true,
+				"shared": true,
+				"preemptive": "capable"
+			}
+		},
+		"LEP_Escape": {
+			"timeStamp": "2020-07-05T09:11:10.307Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"TEST": {
+			"timeStamp": "2020-07-05T09:11:10.307Z"
+		},
+		"print_structure": {
+			"timeStamp": "2020-07-05T09:11:10.309Z",
+			"attributes": {
+				"invisible": true,
+				"shared": true,
+				"preemptive": "incapable"
+			}
+		},
+		"XSLT_Get_folder": {
+			"timeStamp": "2020-07-05T09:11:10.308Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		}
+	}
+}

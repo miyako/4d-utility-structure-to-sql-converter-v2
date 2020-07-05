@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><preferences stamp="4">
+	<com.4d>
+		<deployment>
+			<options/>
+		</deployment>
+		<database>
+			<cache adaptative="false" flush_buffer_delay="20s"/>
+		</database>
+		<server>
+			<network>
+				<options publication_name="structure-to-svg-converter-v2"/>
+				<client_server use_encryption="false"/>
+			</network>
+		</server>
+		<web>
+			<standalone_server>
+				<configuration port_number="80"/>
+			</standalone_server>
+		</web>
+		<compiler>
+			<typage default_for_button="2" default_for_numeric="1"/>
+		</compiler>
+	</com.4d>
+</preferences>

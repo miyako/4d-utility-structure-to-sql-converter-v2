@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="structure-to-sql-converter-v2" uuid="39E257213C0348B49C86499825FF4260" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<base_extra __stringCompHash="icu:63.1.0" __keywordBuildingHash="icu:63.1.0" package_name="structure-to-sql-converter-v2" structure_file_name="structure-to-sql-converter-v2" data_file_path=":structure-to-sql-converter-v2.4DD">
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>
