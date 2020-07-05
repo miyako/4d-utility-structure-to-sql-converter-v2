@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="InvoicesDemo" uuid="652F3EA1E604344993D38C88D5949740" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="CLIENTS" uuid="D51B26D316C37D4BA9AB081E94BAF6C3" id="1">
+		<field name="ID" uuid="9B79A7051949394E8001F9367CE27A4A" type="4" unique="true" autosequence="true" never_null="true" id="1">
+			<index_ref uuid="62513327476F4049AEBC98B2191D3629"/>
+			<field_extra modifiable="false" mandatory="true" enumeration_id="-1">
+				<tip>The client ID				</tip>
+				<editor_field_info>
+					<color red="0" green="158" blue="96" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Name" uuid="05839FF04D458F468E8112DC7DAC5746" type="10" limiting_length="40" never_null="true" id="2">
+			<field_extra enumeration_id="-1">
+				<tip>The client name				</tip>
+			</field_extra>
+		</field>
+		<field name="Address" uuid="3F23EA6282305B499902A3A731ECED8A" type="10" never_null="true" id="3">
+			<field_extra enumeration_id="-1">
+				<tip>The client address 1				</tip>
+			</field_extra>
+		</field>
+		<field name="Numbers" uuid="A1828146FB60E144AE9782DBDBD189C3" type="21" blob_switch_size="2147483647" never_null="true" id="4">
+			<index_ref uuid="9FE03E047A844EE7BED0D2DD63841191"/>
+			<field_extra>
+				<tip>The client address 2				</tip>
+			</field_extra>
+		</field>
+		<field name="City" uuid="76E1DD90E3AE57449F3A409EE113DE17" type="10" limiting_length="40" never_null="true" id="5">
+			<field_extra enumeration_id="-1">
+				<tip>The client zip code				</tip>
+			</field_extra>
+		</field>
+		<field name="State" uuid="520C14B3605DD641914F09979248706C" type="10" limiting_length="40" never_null="true" id="6">
+			<field_extra enumeration_id="-1">
+				<tip>The client city				</tip>
+			</field_extra>
+		</field>
+		<field name="Zip_Code" uuid="F56D291137F7204CB2805BFA5DCCF3E0" type="10" limiting_length="10" never_null="true" id="7">
+			<field_extra enumeration_id="-1">
+				<tip>The client telephone				</tip>
+			</field_extra>
+		</field>
+		<field name="_Phone" uuid="74DF181AACE1954E814939361D8052D0" type="10" limiting_length="20" never_null="true" id="8">
+			<field_extra visible="false">
+				<tip>The client fax				</tip>
+				<editor_field_info>
+					<color red="191" green="48" blue="181" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="_Mobile" uuid="B49637A98019C54AB310E273E30E17EA" type="10" limiting_length="20" never_null="true" id="9">
+			<field_extra visible="false">
+				<tip>The client email				</tip>
+				<editor_field_info>
+					<color red="191" green="48" blue="181" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="_Fax" uuid="4CF83296DF144840A35BDC7DFC0352D1" type="10" limiting_length="20" never_null="true" id="10">
+			<field_extra visible="false">
+				<tip>The client web site				</tip>
+				<editor_field_info>
+					<color red="191" green="48" blue="181" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="_Email" uuid="16FE49DAF81A414FADB8E861435B5F14" type="10" limiting_length="80" never_null="true" id="11">
+			<field_extra visible="false">
+				<tip>The client logo				</tip>
+				<editor_field_info>
+					<color red="191" green="48" blue="181" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="_Web_Site" uuid="4E79CDAE3219514EA18681AF5422FB6B" type="10" limiting_length="80" never_null="true" id="12">
+			<field_extra visible="false">
+				<tip>The client contact				</tip>
+				<editor_field_info>
+					<color red="191" green="48" blue="181" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Logo" uuid="1F077809CC510841A3B55399B077139E" type="12" never_null="true" id="13">
+			<field_extra enumeration_id="-1">
+				<tip>Comments on client				</tip>
+			</field_extra>
+		</field>
+		<field name="Contact" uuid="4ABCFF394CCEB74EBE85685BB3CCFC8E" type="10" limiting_length="80" never_null="true" id="14">
+			<field_extra enumeration_id="-1">
+				<tip>The client total sales				</tip>
+			</field_extra>
+		</field>
+		<field name="Comments" uuid="542481867A8BEB40823B282AAE4E5E1A" type="10" never_null="true" id="15"/>
+		<field name="Total_Sales" uuid="4F49417823CE264697A0B9FDA22F373C" type="6" never_null="true" id="16"/>
+		<field name="Country" uuid="DE4E1273E07B6444BFDCD908269DC715" type="10" limiting_length="40" never_null="true" id="17"/>
+		<field name="Discount_Rate" uuid="95FC3375A564B94B888962DB55C38F07" type="6" never_null="true" id="18"/>
+		<field name="eAddresses" uuid="96C43A6CE374FC41A5C079C6A038E55C" type="21" blob_switch_size="2147483647" never_null="true" id="19">
+			<index_ref uuid="CC71E36D9AE843679336E9CB2A1CEAD2"/>
+		</field>
+		<field name="Optional_Data" uuid="FC24E898C0DE483B83C9FEA3D3285345" type="21" blob_switch_size="2147483647" never_null="true" id="20">
+			<index_ref uuid="A0D9EA1D2A0B437CB3DA41003AAE84B0"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="9B79A7051949394E8001F9367CE27A4A"/>
+		<table_extra trigger_insert="true" trigger_update="true">
+			<editor_table_info displayable_fields_count="20">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="21.28515625" top="6.45703125" width="144" height="471.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="INVOICES" uuid="689F27F44AE5FA43B1D357F9A3A43468" id="2">
+		<field name="ID" uuid="76B6BD940327F94EB5051C7503283164" type="4" unique="true" autosequence="true" never_null="true" id="1">
+			<index_ref uuid="2D9D5F05E03AF74FBC160EEE3A1BDE9E"/>
+			<field_extra modifiable="false" mandatory="true" multi_line="false">
+				<tip>The invoice id				</tip>
+				<editor_field_info>
+					<color red="204" green="122" blue="2" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Invoice_Number" uuid="BF4FE4186E0A7540A128D92A2FB088A6" type="10" limiting_length="20" never_null="true" id="2">
+			<index_ref uuid="01B39D6F7643E74BACE579995701AACB"/>
+			<field_extra enumeration_id="-1">
+				<tip>The invoice number				</tip>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Client_ID" uuid="05CAAB266618E342B11B9DA211DD71C5" type="4" never_null="true" id="3">
+			<index_ref uuid="AF921BFFFDB2534780FFC6AF5C536144"/>
+			<field_extra>
+				<tip>The client id				</tip>
+				<editor_field_info>
+					<color red="0" green="153" blue="181" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Creation_Date" uuid="A3556A9DC2264041AC05A98937803DAC" type="8" never_null="true" id="4">
+			<field_extra enumeration_id="-1">
+				<tip>The invoice date				</tip>
+			</field_extra>
+		</field>
+		<field name="Subtotal_BT" uuid="4BA3D50625DE1D4EBB179BAA4148F9B1" type="6" never_null="true" id="5">
+			<field_extra enumeration_id="-1">
+				<tip>The invoice subtotal				</tip>
+			</field_extra>
+		</field>
+		<field name="Tax" uuid="45FDC54BA63DD94481E93F085D760C6C" type="6" never_null="true" id="6">
+			<field_extra enumeration_id="-1">
+				<tip>The invoice tax (VAT)				</tip>
+			</field_extra>
+		</field>
+		<field name="Total" uuid="893DE7C2FB70A34093350EF73A5B4058" type="6" never_null="true" id="7">
+			<field_extra enumeration_id="-1">
+				<tip>The invoice total				</tip>
+			</field_extra>
+		</field>
+		<field name="Paid" uuid="F9DC932EA147554EB8470AED346E6BA9" type="1" never_null="true" id="8">
+			<field_extra enumeration_id="-1">
+				<tip>True if the invoice is payed				</tip>
+			</field_extra>
+		</field>
+		<field name="Payment_Date" uuid="2FCF0CFF4FC6E541B928A09BA9064F9E" type="8" never_null="true" id="9">
+			<field_extra enumeration_id="-1">
+				<tip>The invoice payement date				</tip>
+			</field_extra>
+		</field>
+		<field name="Payment_Method" uuid="8B227AE27151B245BEB52E570910E17D" type="10" limiting_length="30" never_null="true" id="10">
+			<field_extra enumeration_id="-1">
+				<tip>The invoice payement method				</tip>
+			</field_extra>
+		</field>
+		<field name="Payment_Reference" uuid="94C7CCAA717808449F1D29F205847213" type="10" never_null="true" id="11">
+			<field_extra enumeration_id="-1">
+				<tip>The invoice payement reference				</tip>
+			</field_extra>
+		</field>
+		<field name="ProForma" uuid="65CC25BF8F98EF4E80DB47FF499D5FE5" type="1" never_null="true" id="12"/>
+		<field name="Payment_Delay" uuid="0E68F94E6D16764D972A834D607BA97E" type="3" never_null="true" id="13"/>
+		<field name="Proforma_Number" uuid="4EB412E1C5641B449DE19D51209BF63F" type="10" limiting_length="20" never_null="true" id="14">
+			<index_ref uuid="75395974FF43D84D9C833577CBEAF416"/>
+		</field>
+		<field name="Credit_Note" uuid="C847479724934302B72547965CC7A404" type="1" never_null="true" id="15">
+			<index_ref uuid="B5017DD89CD746D58568280AF84C8204"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="76B6BD940327F94EB5051C7503283164"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="16">
+				<color red="186" green="170" blue="158" alpha="255"/>
+				<coordinates left="235" top="5" width="155" height="398.24609375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="INVOICE_LINES" uuid="C1146E075B67B24CAA3D4910AC2ED24C" id="3">
+		<field name="ID" uuid="701C73A810B33342AD34262E9C843123" type="4" unique="true" autosequence="true" never_null="true" id="1">
+			<index_ref uuid="B1A71A677AF2844E8CC1241EFE6C16CE"/>
+			<field_extra mandatory="true" modifiable="false" enumeration_id="-1">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Invoice_ID" uuid="FB780D6B09568846B8220AF0CAC3DA26" type="4" never_null="true" id="2">
+			<index_ref uuid="A5234CC5EF612E41ABE16A690D91CE01"/>
+			<field_extra enumeration_id="-1">
+				<editor_field_info>
+					<color red="186" green="216" blue="10" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Product_ID" uuid="48C015E83E297B48A2C0618CF0E41FFA" type="4" never_null="true" id="3">
+			<index_ref uuid="11B0B18831B8E847A8EDAAC3983F82FB"/>
+			<field_extra enumeration_id="-1">
+				<editor_field_info>
+					<color red="239" green="107" blue="0" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="_ProductReference" uuid="F6A5167260189242922B21C78F038FEE" type="10" limiting_length="20" never_null="true" id="4">
+			<field_extra visible="false">
+				<editor_field_info>
+					<color red="191" green="48" blue="181" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="_ProductName" uuid="F49CA44D9D601347AA8360834ADE8DB7" type="10" never_null="true" id="5">
+			<field_extra visible="false">
+				<editor_field_info>
+					<color red="191" green="48" blue="181" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Quantity" uuid="D25ECF1D5F10C348B4449C567F241D87" type="6" never_null="true" id="6"/>
+		<field name="Unit_Price" uuid="06398C7386CDE5459CA1C53C56B4841C" type="6" never_null="true" id="7">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Discount_Rate" uuid="851DE4940CDE3445B83F67E20542A617" type="6" never_null="true" id="8"/>
+		<field name="Tax_Rate" uuid="E60CE3A3BD82A94286F57F17A4F2BEAB" type="6" never_null="true" id="9">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Total" uuid="CE7791AE2CC5DE40BBCB369C13514476" type="6" never_null="true" id="10">
+			<field_extra enumeration_id="-1">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Total_Tax" uuid="183B06E6B222164F871719F2EF33E01F" type="6" never_null="true" id="11"/>
+		<field name="Line_Number" uuid="AA26D0F6056542BBBBB61B9B05660B53" type="3" never_null="true" id="12"/>
+		<primary_key field_name="ID" field_uuid="701C73A810B33342AD34262E9C843123"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="12">
+				<color red="207" green="209" blue="165" alpha="255"/>
+				<coordinates left="471.77734375" top="9.1015625" width="148.6484375" height="296.83984375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="PRODUCTS" uuid="E8BEC695CC622E44A54D332A5DD66FC1" id="4">
+		<field name="ID" uuid="C87D853EACF4CB45AAF7FF4A26F62345" type="4" unique="true" autosequence="true" never_null="true" id="1">
+			<index_ref uuid="629A3A13E1D92E4487BA4143CFCB9F05"/>
+			<field_extra mandatory="true" modifiable="false" enumeration_id="-1">
+				<editor_field_info>
+					<color red="239" green="107" blue="0" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="Reference" uuid="C49C4C9BF4352046946E0040253E1B55" type="10" limiting_length="20" never_null="true" id="2">
+			<index_ref uuid="9969F385385EB3448C9B0F8E57AA6DF1"/>
+		</field>
+		<field name="Name" uuid="9E628B5A85E25D47815547CC8A6D9582" type="10" limiting_length="255" never_null="true" id="3">
+			<index_ref uuid="1E2FA44277F64FAC92D6E20B3E82ADD8"/>
+		</field>
+		<field name="Picture" uuid="0692ACE77FB6E64EAE2F66D0DA81CC0E" type="12" never_null="true" id="4"/>
+		<field name="Sale_Price" uuid="9081D52378F5D449B61A3CD1C2A7B218" type="6" never_null="true" id="5"/>
+		<field name="Tax_Rate" uuid="679E12EFBE825440AD1F7C25727442CC" type="6" never_null="true" id="6"/>
+		<field name="Optional_Data" uuid="F6A452B86DCB4C69B07FA916DC88200F" type="21" blob_switch_size="2147483647" id="7">
+			<index_ref uuid="E2996B3D751748778151E1B03DFEF817"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="C87D853EACF4CB45AAF7FF4A26F62345"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="252" green="191" blue="73" alpha="255"/>
+				<coordinates left="697.765625" top="11.4765625" width="168.49609375" height="230.23828125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="DEFAULT_SETTINGS" uuid="343B6E786BFE0048961C4B65C698AACC" id="5" prevent_journaling="true">
+		<field name="ID" uuid="C288D74C4C1EFC4893369AC234602D35" type="4" unique="true" never_null="true" id="1">
+			<index_ref uuid="D1D56BD2E6E74301A7BD76B604104186"/>
+		</field>
+		<field name="Display" uuid="33298C7776403547B53440FC8FA8E5A6" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="Invoices" uuid="6248F59E80CE42A2BC1E2BC014391C61" type="21" blob_switch_size="2147483647" never_null="true" id="3"/>
+		<field name="Clients" uuid="AB0127A28E3F491CA3C79F7113429564" type="21" blob_switch_size="2147483647" never_null="true" id="4"/>
+		<field name="Products" uuid="7CCC59016B5D4490A910631E9F6C5049" type="21" blob_switch_size="2147483647" never_null="true" id="5"/>
+		<field name="Company" uuid="4A35752CC2F3406DAA6CA94FD3C7AAFA" type="21" blob_switch_size="2147483647" never_null="true" id="6"/>
+		<field name="Modes" uuid="DDEF2849F924440EA582E7185E53F786" type="21" blob_switch_size="2147483647" never_null="true" id="7"/>
+		<field name="smtp" uuid="27D7AED53E964B8CA55BC73A5FBFB032" type="21" blob_switch_size="2147483647" never_null="true" id="8"/>
+		<primary_key field_name="ID" field_uuid="C288D74C4C1EFC4893369AC234602D35"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="114" green="209" blue="221" alpha="255"/>
+				<coordinates left="692.76171875" top="269.3203125" width="160" height="216.6484375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="DB086A51B8E14040AF27F65CE8ADC66E" name_Nto1="Product" name_1toN="Lines_Fm_Product" auto_load_Nto1="true" auto_load_1toN="true" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="48C015E83E297B48A2C0618CF0E41FFA" name="Product_ID">
+				<table_ref uuid="C1146E075B67B24CAA3D4910AC2ED24C" name="INVOICE_LINES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="C87D853EACF4CB45AAF7FF4A26F62345" name="ID">
+				<table_ref uuid="E8BEC695CC622E44A54D332A5DD66FC1" name="PRODUCTS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="153" blue="63" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="E102AD0611DC5F4ABC678BF2FAA3355B" name_Nto1="Invoice" name_1toN="Lines_Fm_Invoices" auto_load_Nto1="true" auto_load_1toN="true" foreign_key="false" state="1" integrity="reject">
+		<related_field kind="source">
+			<field_ref uuid="FB780D6B09568846B8220AF0CAC3DA26" name="Invoice_ID">
+				<table_ref uuid="C1146E075B67B24CAA3D4910AC2ED24C" name="INVOICE_LINES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="76B6BD940327F94EB5051C7503283164" name="ID">
+				<table_ref uuid="689F27F44AE5FA43B1D357F9A3A43468" name="INVOICES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="224" green="234" blue="104" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="ED0E940B7BA7AE4B99C3F957045694F1" name_Nto1="Client" name_1toN="Invoice_List" auto_load_Nto1="true" auto_load_1toN="true" foreign_key="false" state="1" integrity="reject">
+		<related_field kind="source">
+			<field_ref uuid="05CAAB266618E342B11B9DA211DD71C5" name="Client_ID">
+				<table_ref uuid="689F27F44AE5FA43B1D357F9A3A43468" name="INVOICES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="9B79A7051949394E8001F9367CE27A4A" name="ID">
+				<table_ref uuid="D51B26D316C37D4BA9AB081E94BAF6C3" name="CLIENTS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="168" green="206" blue="226" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" uuid="01B39D6F7643E74BACE579995701AACB" type="7">
+		<field_ref uuid="BF4FE4186E0A7540A128D92A2FB088A6" name="Invoice_Number">
+			<table_ref uuid="689F27F44AE5FA43B1D357F9A3A43468" name="INVOICES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="11B0B18831B8E847A8EDAAC3983F82FB" type="7">
+		<field_ref uuid="48C015E83E297B48A2C0618CF0E41FFA" name="Product_ID">
+			<table_ref uuid="C1146E075B67B24CAA3D4910AC2ED24C" name="INVOICE_LINES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="1E2FA44277F64FAC92D6E20B3E82ADD8" type="7">
+		<field_ref uuid="9E628B5A85E25D47815547CC8A6D9582" name="Name">
+			<table_ref uuid="E8BEC695CC622E44A54D332A5DD66FC1" name="PRODUCTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="2D9D5F05E03AF74FBC160EEE3A1BDE9E" type="7">
+		<field_ref uuid="76B6BD940327F94EB5051C7503283164" name="ID">
+			<table_ref uuid="689F27F44AE5FA43B1D357F9A3A43468" name="INVOICES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="62513327476F4049AEBC98B2191D3629" type="7">
+		<field_ref uuid="9B79A7051949394E8001F9367CE27A4A" name="ID">
+			<table_ref uuid="D51B26D316C37D4BA9AB081E94BAF6C3" name="CLIENTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="629A3A13E1D92E4487BA4143CFCB9F05" type="1">
+		<field_ref uuid="C87D853EACF4CB45AAF7FF4A26F62345" name="ID">
+			<table_ref uuid="E8BEC695CC622E44A54D332A5DD66FC1" name="PRODUCTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="75395974FF43D84D9C833577CBEAF416" type="7">
+		<field_ref uuid="4EB412E1C5641B449DE19D51209BF63F" name="Proforma_Number">
+			<table_ref uuid="689F27F44AE5FA43B1D357F9A3A43468" name="INVOICES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="9969F385385EB3448C9B0F8E57AA6DF1" type="7">
+		<field_ref uuid="C49C4C9BF4352046946E0040253E1B55" name="Reference">
+			<table_ref uuid="E8BEC695CC622E44A54D332A5DD66FC1" name="PRODUCTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="9FE03E047A844EE7BED0D2DD63841191" type="3">
+		<field_ref uuid="A1828146FB60E144AE9782DBDBD189C3" name="Numbers">
+			<table_ref uuid="D51B26D316C37D4BA9AB081E94BAF6C3" name="CLIENTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A0D9EA1D2A0B437CB3DA41003AAE84B0" type="3">
+		<field_ref uuid="FC24E898C0DE483B83C9FEA3D3285345" name="Optional_Data">
+			<table_ref uuid="D51B26D316C37D4BA9AB081E94BAF6C3" name="CLIENTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A5234CC5EF612E41ABE16A690D91CE01" type="7">
+		<field_ref uuid="FB780D6B09568846B8220AF0CAC3DA26" name="Invoice_ID">
+			<table_ref uuid="C1146E075B67B24CAA3D4910AC2ED24C" name="INVOICE_LINES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="AF921BFFFDB2534780FFC6AF5C536144" type="7">
+		<field_ref uuid="05CAAB266618E342B11B9DA211DD71C5" name="Client_ID">
+			<table_ref uuid="689F27F44AE5FA43B1D357F9A3A43468" name="INVOICES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="B1A71A677AF2844E8CC1241EFE6C16CE" type="7">
+		<field_ref uuid="701C73A810B33342AD34262E9C843123" name="ID">
+			<table_ref uuid="C1146E075B67B24CAA3D4910AC2ED24C" name="INVOICE_LINES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B5017DD89CD746D58568280AF84C8204" type="3">
+		<field_ref uuid="C847479724934302B72547965CC7A404" name="Credit_Note">
+			<table_ref uuid="689F27F44AE5FA43B1D357F9A3A43468" name="INVOICES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="CC71E36D9AE843679336E9CB2A1CEAD2" type="3">
+		<field_ref uuid="96C43A6CE374FC41A5C079C6A038E55C" name="eAddresses">
+			<table_ref uuid="D51B26D316C37D4BA9AB081E94BAF6C3" name="CLIENTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="D1D56BD2E6E74301A7BD76B604104186" type="7">
+		<field_ref uuid="C288D74C4C1EFC4893369AC234602D35" name="ID">
+			<table_ref uuid="343B6E786BFE0048961C4B65C698AACC" name="DEFAULT_SETTINGS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="E2996B3D751748778151E1B03DFEF817" type="3">
+		<field_ref uuid="F6A452B86DCB4C69B07FA916DC88200F" name="Optional_Data">
+			<table_ref uuid="E8BEC695CC622E44A54D332A5DD66FC1" name="PRODUCTS"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:56.1.0" __keywordBuildingHash="icu:56.1.0" package_name="InvoicesDemo" structure_file_name="InvoicesDemo" data_file_path=":InvoicesDemo.4DD" source_code_stamp="1917" intel64_code_stamp="1917"/>
+</base>
