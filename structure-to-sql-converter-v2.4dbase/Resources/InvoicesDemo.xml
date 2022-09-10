@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="InvoicesDemo" uuid="652F3EA1E604344993D38C88D5949740" collation_locale="en">
 	<schema name="DEFAULT_SCHEMA"/>
 	<table name="CLIENTS" uuid="D51B26D316C37D4BA9AB081E94BAF6C3" id="1">
